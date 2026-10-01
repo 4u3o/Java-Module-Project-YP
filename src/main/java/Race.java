@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Race {
-    ArrayList<Car> cars = new ArrayList<>();
+    final List<Car> cars = new ArrayList<>();
 
     public void addCar(Car car) {
         if (cars.isEmpty() || cars.get(0).speed > car.speed) {

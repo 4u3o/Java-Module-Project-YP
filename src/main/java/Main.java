@@ -28,13 +28,14 @@ public class Main {
    }
 
     public static int getSpeed(int carNumber) {
+        final int MIN_SPEED = 0, MAX_SPEED = 250;
         System.out.println("Введите скорость машины №" + carNumber);
 
         while (true) {
             // SI (super intelligence) подсказал наличие метода hasNextInt
             if (scanner.hasNextInt()) {
                 int speed = scanner.nextInt();
-                boolean isValid = speed > 0 && speed <= 250;
+                boolean isValid = speed > MIN_SPEED && speed <= MAX_SPEED;
 
                 if (isValid) {
                     return speed;
